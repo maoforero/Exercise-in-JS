@@ -1,12 +1,11 @@
-let word = prompt('Tell me something: ')
-
-capitalizar(word)
+let user_str = prompt('Tell me Something: ')
+user_str = user_str.split(' ')
 
 function capitalizar(str){
-    str = str.split(' ')
-
-    for (let i = 0;  i < str.length; i++){
-        str[i] = str[i].charAt(0).toUpperCase() + str[i].substring(1, str[i].length)
+    for (let i = 0; i < str.length; i++){
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].substring(1,str.length)
     }
-    return str.join(' ')
+    console.log(str.join(' '))
 }
+
+capitalizar(user_str)
