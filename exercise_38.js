@@ -1,9 +1,7 @@
-let person = {
-    weigth : 65,
-    height : 1.8,
-    bmi : function(){
-        return person.weigth / (person.height**2)
+function descifrar (str, obj){
+    for(let k in obj){
+        str = str.replace(k, obj[k])
     }
+    return str
 }
-
-console.log(person.bmi())
+  console.log(descifrar("h0l4", { 0: "o", 4: "a" })) // "hola"
